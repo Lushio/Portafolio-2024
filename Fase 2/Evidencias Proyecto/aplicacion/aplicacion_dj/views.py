@@ -6,3 +6,6 @@ def ficha_lista(request):
 
 def servicio_lista(request):
     return render(request, "servicio_lista.html")
+
+def ficha_personal(request):
+    return render(request,"ficha_personal.html")

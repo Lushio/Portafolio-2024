@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static 'css\ficha_personal.css' %}">
+    <script src="{% static "js\header.js" %}"></script>
+
+</head>
+
+<body>
+    <header id="h" style="padding: 10px;">
+        <div id="b_home">
+            <button class='bx bxs-home bx-md'
+                style="color: #191919; background-color: transparent; border-color: transparent;"></button>
+        </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn bx bxs-user-rectangle"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Información 1</a>
+                <a href="#about">Informacion 2</a>
+                <a href="#contact" id="c_s">
+                    <i class='bx bx-log-out bx-sm' style="margin-right: 12px;">
+                    </i>Cerrar Sesión</a>
+            </div>
+    </header> <br>
+    <div class="container mt-3">
+        <h1 id="titulo">[Nombre_usuario] </h1>
+        <hr id="linea"> <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#datos_p">Datos Personales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#asis_reg">Asistencias Registradas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#serv_reg">Servicios Utilizados</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="datos_p" class="container tab-pane active"><br>
+                <h3></h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <p id="titulo_c">Nombre Completo</p>
+                            <Input id="input_d" value="Nombre Completo Usuario" readonly>
+                            </Input>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="container" id="con_l">
+                    <div class="row">
+                        <div class="col-6">
+                            <p id="titulo_c">Identificación (R.U.T)</p>
+                            <input id="input_d" type="text" value="nombre Completo Usuario" readonly>
+                        </div><br>
+                        <div class="col-6">
+                            <p id="titulo_c">Nacionalidad</p>
+                            <input id="input_d" type="text">
+                        </div>
+                    </div>
+                </div> <br>
+                <div class="container" id="con_l">
+                    <div class="row">
+                        <div class="col-6">
+                            <p id="titulo_c">Fecha Nacimiento</p>
+                            <input id="input_d" type="text" value="nombre Completo Usuario" readonly>
+                        </div><br>
+                        <div class="col-6">
+                            <p id="titulo_c">Condiciones de Salud</p>
+                            <input id="input_d" type="text">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container" id="con_l">
+                    <div class="row">
+                        <div class="col-6">
+                            <p id="titulo_c">Preferencias</p>
+                            <textarea id="input_d" type="text" value="nombre Completo Usuario" readonly>
+                            </textarea>
+                        </div><br>
+                        <div class="col-6">
+                            <p id="titulo_c">Necesidades</p>
+                            <textarea id="input_d" type="text" value="nombre Completo Usuario" readonly>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="asis_reg" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </div>
+            <div id="serv_reg" class="container tab-pane fade"><br>
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
