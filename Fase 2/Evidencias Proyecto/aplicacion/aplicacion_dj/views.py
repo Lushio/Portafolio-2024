@@ -9,3 +9,6 @@ def servicio_lista(request):
 
 def ficha_personal(request):
     return render(request,"ficha_personal.html")
+
+def form_ingreso(request):
+    return render(request,"form_ingreso.html")
