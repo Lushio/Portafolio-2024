@@ -19,3 +19,6 @@ def ficha_lista(request):
 
 def servicio_lista(request):
     return render(request,"servicio_lista.html")
+
+def lista_reg_asis(request):
+    return render(request, "lista_reg_asis.html")
