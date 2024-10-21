@@ -1,4 +1,5 @@
-{%load static%}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +14,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--Links-->
     <link rel="stylesheet" href="{% static 'css\form_ingreso.css' %}">
-    <script src="{% static "js\header.js" %}"></script>
+    <script src="{% static 'js\header.js' %}"></script>
+
+
 </head>
 
 <body>
-    {% comment %} <header id="h" style="padding: 10px;">
+    <header id="h" style="padding: 10px;">
         <div id="b_home">
             <button class='bx bxs-home bx-md'
                 style="color: #191919; background-color: transparent; border-color: transparent;"></button>
@@ -32,23 +36,33 @@
                     <i class='bx bx-log-out bx-sm' style="margin-right: 12px;">
                     </i>Cerrar Sesión</a>
             </div>
-    </header> <br> {% endcomment %}
+        </div>
+    </header> <br>
     <div>
-        <h1>Registro Personal Ingresos</h1>
+        <h1 id="titulo">Registro Ingreso</h1>
+        <hr id="linea"><br>
         <div class="container">
             <fieldset id="marco">
                 <div class="row">
-                    <form action="">
+                    <form id="form" action="">
+                        <h5>1. Nombre Completo</h5><br>
                         <div class="form-group">
                             <div class="container" id="con_l">
                                 <div class="row">
                                     <div class="col-6">
-                                        <p id="titulo_c">Primer Nombre</p>
-                                        <input id="input_d" class="form-control" type="text" value="">
+                                        <label id="titulo_c">Primer Nombre</label>
+                                        <input id="input_d" 
+                                            class="form-control" 
+                                            type="text" 
+                                            placeholder="Primer Nombre"
+                                            required>
                                     </div><br>
                                     <div class="col-6">
-                                        <p id="titulo_c">Segundo Nombre</p>
-                                        <input id="input_d" type="text" class="form-control">
+                                        <label id="titulo_c">Segundo Nombre</label>
+                                        <input id="input_d" 
+                                            type="text" 
+                                            class="form-control"
+                                            placeholder="Segundo Nombre">
                                     </div>
                                 </div>
                             </div>
@@ -57,12 +71,44 @@
                             <div class="container" id="con_l">
                                 <div class="row">
                                     <div class="col-6">
-                                        <p id="titulo_c">Apellido Paterno</p>
-                                        <input id="input_d" class="form-control" type="text" value="">
+                                        <label id="titulo_c">Apellido Paterno</label>
+                                        <input id="input_d" 
+                                            class="form-control" 
+                                            type="text" 
+                                            placeholder="Apellido Paterno"
+                                            required>
                                     </div><br>
                                     <div class="col-6">
-                                        <p id="titulo_c">Apellido Materno</p>
-                                        <input id="input_d" type="text" class="form-control">
+                                        <label id="titulo_c">Apellido Materno</label>
+                                        <input id="input_d" 
+                                            type="text" 
+                                            class="form-control"
+                                            placeholder="Apellido Materno"
+                                            required>
+                                    </div>
+                                </div>
+                            </div> <br>
+                        </div>
+                        <hr>
+                        <h5>2. Datos Personales</h5> <br>
+                        <div class="form-group">
+                            <div class="container" id="con_l">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label id="titulo_c">Identificación (R.U.T)</label>
+                                        <input id="input_d" 
+                                            class="form-control" 
+                                            type="text" 
+                                            placeholder="R.U.T"
+                                            required>
+                                    </div><br>
+                                    <div class="col-6">
+                                        <label id="titulo_c">Nacionalidad</label>
+                                        <input id="input_d" 
+                                            type="text" 
+                                            class="form-control"
+                                            placeholder="Nacionalidad"
+                                            required>
                                     </div>
                                 </div>
                             </div> <br>
@@ -71,54 +117,54 @@
                             <div class="container" id="con_l">
                                 <div class="row">
                                     <div class="col-6">
-                                        <p id="titulo_c">Identificación (R.U.T)</p>
-                                        <input id="input_d" class="form-control" type="text" value="">
+                                        <label id="titulo_c">Edad</label>
+                                        <input id="input_d" 
+                                            class="form-control" 
+                                            type="number" 
+                                            min="18"
+                                            placeholder="Edad"
+                                            required>
+                                            
                                     </div><br>
                                     <div class="col-6">
-                                        <p id="titulo_c">Nacionalidad</p>
-                                        <input id="input_d" type="text" class="form-control">
+                                        <label id="titulo_c">Discapacidad</label>
+                                        <input id="input_d" 
+                                            type="text" 
+                                            class="form-control"
+                                            placeholder="Discapacidad">
                                     </div>
                                 </div>
                             </div> <br>
+                            <hr>
+                            <h5>3. Otros</h5> <br>
+                            <div class="form-group">
+                                <div class="container" id="con_l">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label id="titulo_c">Preferencias</label>
+                                            <textarea id="input_d" 
+                                                type="text" 
+                                                class="form-control"></textarea>
+                                        </div><br>
+                                        <div class="col-6">
+                                            <label id="titulo_c">Necesidades</label>
+                                            <textarea id="input_d" 
+                                                type="text" 
+                                                class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <div class="container" id="con_l">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p id="titulo_c">Edad</p>
-                                        <input id="input_d" class="form-control" type="text" value="">
-                                    </div><br>
-                                    <div class="col-6">
-                                        <p id="titulo_c">Discapacidad</p>
-                                        <input id="input_d" type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div> <br>
-         
-                        <div class="form-group">
-                            <div class="container" id="con_l">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p id="titulo_c">Preferencias</p>
-                                        <textarea id="input_d" type="text" class="form-control"></textarea>
-                                    </div><br>
-                                    <div class="col-6">
-                                        <p id="titulo_c">Necesidades</p>
-                                        <textarea id="input_d" type="text" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div> <br>
-                        </div>
+
+                        <br>
+                        <!-- Otros campos del formulario -->
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
                 </div>
 
-                <br>
-                <!-- Otros campos del formulario -->
-                <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+            </fieldset>
         </div>
-
-        </fieldset>
-    </div>
     </div>
 </body>
 
